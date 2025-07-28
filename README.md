@@ -6,21 +6,29 @@ Teste básico da comunicação MODBUS.
 
 É preciso mover `ESP32Logger Log;` para o lugar certo em ESP32Logger.cpp
 
-# Esse é log no monitor serial:
+# Log no monitor serial
 
 ```
 rs485 - [>>]: 64 4 0 0 0 2 78 3e 
-E (9382) gpio: gpio_set_level(227): GPIO output gpio_num error
-E (9393) gpio: gpio_set_level(227): GPIO output gpio_num error
-00000009483 DBG write:  >> 64 4 0 0 0 2 78 3e 
-00000009533 DBG read:  << 64 4 4 5f 93 41 88 1c 8d 
-rs485 - [<<]: 64 4 4 5f 93 41 88 1c 8d 
-Received Float Value: 17.047
+E (215481) gpio: gpio_set_level(227): GPIO output gpio_num error
+E (215492) gpio: gpio_set_level(227): GPIO output gpio_num error
+00000215596 DBG write:  >> 64 4 0 0 0 2 78 3e 
+00000215646 DBG read:  << 64 4 4 f9 2c 41 87 4f e5 
+rs485 - [<<]: 64 4 4 f9 2c 41 87 4f e5 
+Received Float Value: 16.997
 rs485 - [>>]: 64 4 0 2 0 2 d9 fe 
-E (9444) gpio: gpio_set_level(227): GPIO output gpio_num error
-E (9454) gpio: gpio_set_level(227): GPIO output gpio_num error
-00000009544 DBG write:  >> 64 4 0 2 0 2 d9 fe 
-00000009594 DBG read:  << 64 4 4 a3 d7 42 83 2d ff 
-rs485 - [<<]: 64 4 4 a3 d7 42 83 2d ff 
-Received Float Value: 65.820
+E (215543) gpio: gpio_set_level(227): GPIO output gpio_num error
+E (215553) gpio: gpio_set_level(227): GPIO output gpio_num error
+00000215657 DBG write:  >> 64 4 0 2 0 2 d9 fe 
+00000215708 DBG read:  << 64 4 4 83 69 42 87 47 d8 
+rs485 - [<<]: 64 4 4 83 69 42 87 47 d8 
+Received Float Value: 67.757
+```
+
+# Log no USR-TCP232-410s
+```
+Receive HEX: 0x64 0x4 0x0 0x0 0x0 0x2 0x78 0x3e 
+Receive HEX: 0x64 0x4 0x4 0xf9 0x2c 0x41 0x87 0x4f 0xe5 
+Receive HEX: 0x64 0x4 0x0 0x2 0x0 0x2 0xd9 0xfe 
+Receive HEX: 0x64 0x4 0x4 0x83 0x69 0x42 0x87 0x47 0xd8 
 ```
